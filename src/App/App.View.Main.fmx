@@ -1,0 +1,83 @@
+object frmMainForm: TfrmMainForm
+  Left = 0
+  Top = 0
+  Caption = 'FMX Langs'
+  ClientHeight = 460
+  ClientWidth = 631
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object btnTestMsg: TButton
+    Position.X = 96.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 0
+    Text = 'Test Msg'
+    OnClick = btnTestMsgClick
+  end
+  object btnLoad: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 4
+    Text = 'Load Langs'
+    OnClick = btnLoadClick
+  end
+  object lstIdiomas: TListBox
+    Position.X = 8.000000000000000000
+    Position.Y = 60.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 277.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    OnChange = lstIdiomasChange
+    Viewport.Width = 165.000000000000000000
+    Viewport.Height = 273.000000000000000000
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Size, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 40.000000000000000000
+    TextSettings.Font.Style = [fsBold]
+    Text = 'Idiomas'
+  end
+  object lstTraducciones: TListBox
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 192.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 433.000000000000000000
+    Size.Height = 393.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 429.000000000000000000
+    Viewport.Height = 389.000000000000000000
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Size, FontColor]
+    Position.X = 192.000000000000000000
+    Position.Y = 38.000000000000000000
+    TextSettings.Font.Style = [fsBold]
+    Text = 'Traducciones'
+  end
+  object lblAutoTraduccion: TLabel
+    Anchors = [akTop, akRight]
+    StyledSettings = [Family, Style]
+    Position.X = 232.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 392.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.FontColor = claDarkblue
+    TextSettings.HorzAlign = Trailing
+  end
+end
