@@ -15,10 +15,12 @@ type
     lstTraducciones: TListBox;
     Label2: TLabel;
     lblAutoTraduccion: TLabel;
+    btnReset: TButton;
     procedure btnTestMsgClick(Sender: TObject);
     procedure btnLoadClick(Sender: TObject);
     procedure lstIdiomasChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure btnResetClick(Sender: TObject);
   private
     { Private declarations }
     function GetDirectoryLangs: string;
@@ -57,12 +59,19 @@ begin
   Self.RefreshScreenIdiomasDisp;
 end;
 
+procedure TfrmMainForm.btnResetClick(Sender: TObject);
+begin
+  ResetLang;
+  Self.RefreshScreenIdiomasDisp;
+end;
+
 procedure TfrmMainForm.RefreshScreenIdiomasDisp;
 var
   i: Integer;
 begin
   lstIdiomas.BeginUpdate;
   try
+     lstIdiomas.Items.Clear;
      for i := 0 to TLanguageUtils.Lang.Resources.Count-1 do
         lstIdiomas.Items.Add( Trim( TLanguageUtils.Lang.Resources.Strings[i] ) );
   finally
